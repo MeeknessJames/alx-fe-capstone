@@ -83,7 +83,6 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 5,
     alignItems: "center",
-    fontSize: 20,
     flex: 1,
   },
   button: {
@@ -93,13 +92,12 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 5,
     alignItems: "center",
-    fontSize: 20,
     backgroundColor: "white",
     flex: 1,
   },
   buttonGroup: {
     flexDirection: "row",
-    gap: 20,
+    justifyContent: "space-between",
     paddingHorizontal: 20,
   },
 });
