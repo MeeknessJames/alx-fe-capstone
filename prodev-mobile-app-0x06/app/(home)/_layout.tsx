@@ -1,7 +1,7 @@
 import { AntDesign, EvilIcons, Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 
-const HomeRootLayout = () => {
+export default function HomeRootLayout() {
   return (
     <Tabs
       screenOptions={{
@@ -49,6 +49,4 @@ const HomeRootLayout = () => {
       />
     </Tabs>
   );
-};
-
-export default HomeRootLayout;
+}
