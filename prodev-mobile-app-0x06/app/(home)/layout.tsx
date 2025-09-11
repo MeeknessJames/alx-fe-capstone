@@ -1,10 +1,4 @@
-import {
-  AntDesign,
-  EvilIcons,
-  Feather,
-  FontAwesome,
-  Ionicons,
-} from "@expo/vector-icons";
+import { AntDesign, EvilIcons, Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 
 const HomeRootLayout = () => {
@@ -19,9 +13,7 @@ const HomeRootLayout = () => {
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color }) => (
-            <AntDesign name="home" size={24} color={color} />
-          ),
+          tabBarIcon: ({ color }) => <AntDesign name="home" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
@@ -29,9 +21,7 @@ const HomeRootLayout = () => {
         options={{
           title: "Search",
           headerShown: true,
-          tabBarIcon: ({ color }) => (
-            <Feather name="search" size={24} color={color} />
-          ),
+          tabBarIcon: ({ color }) => <Feather name="search" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
@@ -39,9 +29,7 @@ const HomeRootLayout = () => {
         options={{
           title: "Saved",
           headerShown: true,
-          tabBarIcon: ({ color }) => (
-            <EvilIcons name="heart" size={27} color={color} />
-          ),
+          tabBarIcon: ({ color }) => <EvilIcons name="heart" size={27} color={color} />,
         }}
       />
       <Tabs.Screen
@@ -49,9 +37,7 @@ const HomeRootLayout = () => {
         options={{
           title: "Inbox",
           headerShown: true,
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="chatbubbles-outline" size={24} color={color} />
-          ),
+          tabBarIcon: ({ color }) => <Ionicons name="chatbubbles-outline" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
@@ -59,9 +45,7 @@ const HomeRootLayout = () => {
         options={{
           title: "Profile",
           headerShown: true,
-          tabBarIcon: ({ color }) => (
-            <FontAwesome name="user-o" size={24} color="black" />
-          ),
+          tabBarIcon: ({ color }) => <FontAwesome name="user-o" size={24} color={color} />,
         }}
       />
     </Tabs>
