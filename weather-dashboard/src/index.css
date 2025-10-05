@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background: #f8fafc;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+  }
+
+  body.dark {
+    background: #0f172a;
+    color: #f1f5f9;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Neomorphic Card Styles */
+  .weather-card {
+    @apply bg-white rounded-3xl shadow-lg;
+    box-shadow: 
+      20px 20px 60px #d1d9e6,
+      -20px -20px 60px #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .dark .weather-card {
+    @apply bg-slate-800;
+    box-shadow: 
+      20px 20px 60px #0a0e1a,
+      -20px -20px 60px #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Neomorphic Input Styles */
+  .weather-input {
+    @apply w-full px-4 py-3 rounded-2xl bg-white text-slate-800 placeholder-slate-500 focus:outline-none transition-all duration-300;
+    box-shadow: 
+      inset 8px 8px 16px #d1d9e6,
+      inset -8px -8px 16px #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .dark .weather-input {
+    @apply bg-slate-800 text-slate-200 placeholder-slate-400;
+    box-shadow: 
+      inset 8px 8px 16px #0a0e1a,
+      inset -8px -8px 16px #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Neomorphic Button Styles */
+  .weather-button {
+    @apply px-6 py-3 rounded-2xl bg-white text-slate-800 font-medium transition-all duration-300 focus:outline-none;
+    box-shadow: 
+      8px 8px 16px #d1d9e6,
+      -8px -8px 16px #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .weather-button:hover {
+    box-shadow: 
+      4px 4px 8px #d1d9e6,
+      -4px -4px 8px #ffffff;
+  }
+
+  .dark .weather-button {
+    @apply bg-slate-800 text-slate-200;
+    box-shadow: 
+      8px 8px 16px #0a0e1a,
+      -8px -8px 16px #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .weather-button:hover {
+    box-shadow: 
+      4px 4px 8px #0a0e1a,
+      -4px -4px 8px #1e293b;
+  }
+
+  /* Primary Button */
+  .weather-button-primary {
+    @apply bg-blue-600 text-white;
+    box-shadow: 
+      8px 8px 16px #1e40af,
+      -8px -8px 16px #3b82f6;
+  }
+
+  .weather-button-primary:hover {
+    box-shadow: 
+      4px 4px 8px #1e40af,
+      -4px -4px 8px #3b82f6;
+  }
+
+  /* Search Button */
+  .search-button {
+    @apply px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium transition-all duration-300 focus:outline-none;
+    box-shadow: 
+      4px 4px 8px #d1d9e6,
+      -4px -4px 8px #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .search-button:hover {
+    box-shadow: 
+      2px 2px 4px #d1d9e6,
+      -2px -2px 4px #ffffff;
+  }
+
+  .dark .search-button {
+    box-shadow: 
+      4px 4px 8px #0a0e1a,
+      -4px -4px 8px #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .search-button:hover {
+    box-shadow: 
+      2px 2px 4px #0a0e1a,
+      -2px -2px 4px #1e293b;
+  }
+
+  .search-button:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  /* Temperature Display */
+  .temperature-display {
+    @apply text-6xl font-bold text-slate-800;
+  }
+
+  .dark .temperature-display {
+    @apply text-slate-200;
+  }
+
+  /* Weather Icon */
+  .weather-icon {
+    @apply w-20 h-20 text-slate-600;
+  }
+
+  .dark .weather-icon {
+    @apply text-slate-300;
+  }
+
+  /* Neomorphic Small Cards */
+  .neomorphic-card {
+    @apply bg-white rounded-2xl p-4;
+    box-shadow: 
+      6px 6px 12px #d1d9e6,
+      -6px -6px 12px #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .dark .neomorphic-card {
+    @apply bg-slate-800;
+    box-shadow: 
+      6px 6px 12px #0a0e1a,
+      -6px -6px 12px #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Neomorphic Settings Button */
+  .settings-button {
+    @apply fixed top-6 right-6 p-3 rounded-full bg-white transition-all duration-300;
+    box-shadow: 
+      8px 8px 16px #d1d9e6,
+      -8px -8px 16px #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .settings-button:hover {
+    box-shadow: 
+      4px 4px 8px #d1d9e6,
+      -4px -4px 8px #ffffff;
+  }
+
+  .dark .settings-button {
+    @apply bg-slate-800 text-slate-200;
+    box-shadow: 
+      8px 8px 16px #0a0e1a,
+      -8px -8px 16px #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .settings-button:hover {
+    box-shadow: 
+      4px 4px 8px #0a0e1a,
+      -4px -4px 8px #1e293b;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
