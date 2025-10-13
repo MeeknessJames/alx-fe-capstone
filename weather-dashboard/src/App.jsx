@@ -60,7 +60,7 @@ function AppContent() {
         {/* Footer */}
         <footer className="text-center text-slate-500 dark:text-slate-400 mt-12">
           <p className="mb-2">
-            Neomorphic weather dashboard By Wonsurum Davison
+            Neomorphic weather dashboard By Meekness James
           </p>
           <p className="text-sm">
             Weather data provided by OpenWeatherMap API
